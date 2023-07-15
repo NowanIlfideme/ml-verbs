@@ -1,2 +1,3 @@
-# ml-verbs
-Interfaces for machine learning
+# `ml_verbs`
+
+General interfaces for machine learning.
