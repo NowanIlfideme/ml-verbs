@@ -20,7 +20,7 @@ classifiers = [
     "Topic :: Software Development",
     "Typing :: Typed",
 ]
-dependencies = []
+dependencies = ["pydantic-cereal"]
 urls = { github = "https://github.com/NowanIlfideme/ml-verbs" }
 
 [project.optional-dependencies]
@@ -34,6 +34,7 @@ dev = [
     "mypy==1.3.0",
     "pytest==7.3.2",
 ]
+dev_extras = ["pandas", "polars", "xarray", "pyspark"]
 docs = [
     "mkdocs",
     "mkdocs-material",
