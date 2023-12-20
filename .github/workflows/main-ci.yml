@@ -67,9 +67,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install Package with dependencies ${{ matrix.deps }}
+      - name: Install with deps [${{ matrix.deps }}]
         run: |
-          pip install "pydantic~=${{ matrix.lib-pydantic }}"
           pip install -e ".[${{ matrix.deps }}]"
       - name: Build
         run: python setup.py sdist bdist_wheel
@@ -99,9 +98,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install Package with dependencies ${{ matrix.deps }}
+      - name: Install with deps [${{ matrix.deps }}]
         run: |
-          pip install "pydantic~=${{ matrix.lib-pydantic }}"
           pip install -e ".[${{ matrix.deps }}]"
       - name: Build
         run: python setup.py sdist bdist_wheel
