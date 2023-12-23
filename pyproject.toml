@@ -25,22 +25,34 @@ urls = { github = "https://github.com/NowanIlfideme/ml-verbs" }
 
 [project.optional-dependencies]
 dev = [
+    # Dependencies and build
     "setuptools>=61.0.0",
     "setuptools-scm[toml]>=6.2",
-    "pre-commit==3.3.3",
-    "black==23.3.0",
+    "wheel>=0.41",
+    # Dev tools
+    "pre-commit==3.5.0",
+    # Linting
+    "ruff==0.1.7",
+    "black==23.11.0",
     "isort==5.12.0",
-    "ruff==0.0.272",
-    "mypy==1.3.0",
-    "pytest==7.3.2",
+    "mypy==1.7.1",
+    # Testing
+    "pytest==7.4.3",
+    "pytest-lazy-fixture==0.6.3",
+    # Jupyter Notebook
+    "jupyter",
+    "ipykernel",
+    # Stubs (including optional dependencies)
+    "pandas-stubs",
 ]
 dev_extras = ["pandas", "polars", "xarray", "pyspark"]
 docs = [
-    "mkdocs",
-    "mkdocs-material",
-    "mkdocstrings[python]",
-    "pymdown-extensions",
-    "pygments",
+    "mkdocs==1.5.3",
+    "mkdocs-material==9.5.1",
+    "mkdocstrings==0.24.0",
+    "mkdocstrings-python==1.7.5",
+    "mkdocs-jupyter==0.24.6",
+    "pygments==2.17.2",
 ]
 
 [project.scripts]
